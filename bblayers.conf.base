@@ -5,10 +5,13 @@ POKY_BBLAYERS_CONF_VERSION = "2"
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
+YOCTOROOT = "${@os.path.abspath(os.path.join("${TOPDIR}", "../../"))}"
+
+# Note: poky/meta-yocto-bsp layer replaced with meta-raspberrypi layer
+
 BBLAYERS ?= " \
-  /home/ubuntu/final-project-ajdonich/poky/meta \
-  /home/ubuntu/final-project-ajdonich/poky/meta-poky \
-  /home/ubuntu/final-project-ajdonich/poky/meta-yocto-bsp \
-  /home/ubuntu/final-project-ajdonich/meta-raspberrypi \
-  /home/ubuntu/final-project-ajdonich/meta-spi-tft \
+  ${YOCTOROOT}/poky/meta \
+  ${YOCTOROOT}/poky/meta-poky \
+  ${YOCTOROOT}/meta-raspberrypi \
+  ${YOCTOROOT}/meta-spi-tft \
   "
