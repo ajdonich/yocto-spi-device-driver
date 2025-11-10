@@ -1,11 +1,11 @@
 LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0-or-later;md5=fed54355545ffd980b814dab4a3b312c"
 
-SRC_URI = "git://git@github.com/ajdonich/spi-device-driver.git;protocol=ssh;branch=main"
-SRCREV = "ab9c4fb91abb03a82d6cd4180419c915c4311752"
+SRC_URI = "git://git@github.com/ajdonich/spi-device-driver.git;protocol=https;branch=main"
+SRCREV = "eefa764fb5181a97e159df933a30fdc46282ed2e"
 
-#S = "${WORKDIR}/git"
-S = "${UNPACKDIR}"
+S = "${WORKDIR}/git"
+#S = "${UNPACKDIR}"
 
 inherit deploy
 inherit module

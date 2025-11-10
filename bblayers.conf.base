@@ -6,12 +6,12 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 YOCTOROOT = "${@os.path.abspath(os.path.join("${TOPDIR}", "../../"))}"
-
 # Note: poky/meta-yocto-bsp layer replaced with meta-raspberrypi layer
 
 BBLAYERS ?= " \
   ${YOCTOROOT}/poky/meta \
   ${YOCTOROOT}/poky/meta-poky \
+  ${YOCTOROOT}/poky/meta-yocto-bsp \
   ${YOCTOROOT}/meta-raspberrypi \
   ${YOCTOROOT}/meta-spi-tft \
   "
